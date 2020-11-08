@@ -96,6 +96,10 @@ while start_communicating is False:
 
 # here starts communicating
 plaintext = input("Send text safely: ")
+if plaintext.lower() == 'file':
+    f = open("demo.txt", "r")
+    plaintext = f.read()
+
 cyphertext = ''
 if MODE == 'ECB':
     cyphertext = si.ecb_encrypt(plaintext.encode('utf-8'), KEY.encode('utf-8'))

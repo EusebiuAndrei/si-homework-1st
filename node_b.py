@@ -121,4 +121,4 @@ if MODE == 'ECB':
     plaintext = si.ecb_decrypt(cyphertext, KEY.encode('utf-8'))
 else:
     plaintext = si.ofb_decrypt(cyphertext, KEY.encode('utf-8'))
-print(f"Textul primit decriptat este: {plaintext}")
+print(f"Textul primit decriptat este:\n {plaintext}")
